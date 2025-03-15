@@ -413,7 +413,7 @@ header > h1 {
 
 /* Footer */
 footer {
-    height: 25%;
+    height: 20svh;
     width: 100%;
     background: black;
     position: static;
