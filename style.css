@@ -70,7 +70,38 @@ section {
 
 
 
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scrollFade {
+    0% {
+        opacity: 0;
+        scale: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+
 /* Hero */
+#hero {
+    height: 100svh;
+    animation: fadeIn 2500ms forwards;
+    -webkit-animation: fadeIn 2500ms forwards;
+}
+
 #hero #left > img {
     height: 25rem;
     width: auto;
@@ -114,6 +145,13 @@ section {
 
 
 /* Languages */
+#Languages {
+    animation: scrollFade forwards;
+    -webkit-animation: scrollFade forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
 #Languages #left {
     flex-direction: column;
 }
@@ -150,6 +188,13 @@ section {
 
 
 /* About Me */
+#aboutMe {
+    animation: scrollFade forwards;
+    -webkit-animation: scrollFade forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
 #aboutMe .wrapper {
     flex-direction: column;
 }
