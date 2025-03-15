@@ -45,7 +45,7 @@ section {
 
 .wrapper {
     height: 100%;
-    width: 95%;
+    width: 90%;
     position: relative;
     top: 50%;
     left: 50%;
@@ -77,6 +77,30 @@ header > h1 {
     text-transform: capitalize;
 }
 
+#left {
+    height: 100%;
+    width: calc(50% - 5rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5rem;
+}
+
+#right {
+    height: 100%;
+    width: calc(50% - 5rem);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 5rem;
+}
+
 .content {
     height: fit-content;
     width: fit-content;
@@ -92,8 +116,33 @@ header > h1 {
 
 .content > i {
     font-size: 4rem;
-    padding: 1em;
+    margin: 1em;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: fit-content;
+    color: var(--text-light);
+    text-shadow: none;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    font-size: 1rem;
+    top: 100%;
+    left: 50%;
+    margin-left: calc(fit-content - 50%);
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 
 
 
@@ -128,72 +177,75 @@ header > h1 {
     -webkit-animation: fadeIn forwards;
     animation-duration: 2500ms;
 }
-#hero > .wrapper > img {
+
+#hero > .wrapper > #left > img {
     height: auto;
-    width: 25%;
+    width: 20rem;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-25%, -50%);
-    -webkit-transform: translate(-25%, -50%);
-    -moz-transform: translate(-25%, -50%);
-    -ms-transform: translate(-25%, -50%);
-    -o-transform: translate(-25%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
     object-fit: cover;
 }
 
-#hero > .wrapper > main {
+#hero > .wrapper > #right > main {
     height: fit-content;
     width: fit-content;
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translate(-5%, -50%);
-    -webkit-transform: translate(-5%, -50%);
-    -moz-transform: translate(-5%, -50%);
-    -ms-transform: translate(-5%, -50%);
-    -o-transform: translate(-5%, -50%);
 }
 
-#hero > .wrapper > main > h1 {
+#right > main > h1 {
     font-size: 4rem;
     font-weight: 100;
     white-space: nowrap;
 }
 
-#hero > .wrapper > main > h1 > a {
+#right > main > h1 > a {
     color: var(--accent-light);
     text-decoration: none;
     font-weight: 250;
 }
 
-#hero > .wrapper > main > h5 {
+#right > main > h5 {
     font-size: 1.5rem;
     font-weight: 100;
     white-space: nowrap;
 }
 
-#hero > .wrapper > main > .socialLinks {
+#right > main > i {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: rgba(0,255,0,1);
+}
+
+#right > main > i > p {
+    color: var(--text-light);
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+
+#right > main > .socialLinks {
     height: fit-content;
     width: 100%;
     margin-top: 1.5rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 1rem;
+    gap: 1em;
     font-size: 1.5rem;
 }
 
-#hero > .wrapper > main > .socialLinks > a {
+#right > main > .socialLinks > a {
     text-decoration: none;
     color: var(--text-light);
 }
@@ -210,41 +262,115 @@ header > h1 {
     color: rgba(0,133,255,1);
 }
 
+.fa-file-lines {
+    color: rgba(66,133,244,1);
+}
 
 
-/* What I Know */
-#whatIKnow {
+
+/* Languages */
+#Languages {
     animation: fadeInScroll forwards;
     -webkit-animation: fadeInScroll forwards;
     animation-timeline: view();
     animation-range: entry;
+}
+
+/* Left */
+#languagesLeft {
+    height: 100%;
+    width: calc(50% - 5rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5rem;
 }
 
 .fa-html5 {
     color: rgba(227,76,38,1);
+    transition: 250ms;
+    -webkit-transition: 250ms;
+    -moz-transition: 250ms;
+    -ms-transition: 250ms;
+    -o-transition: 250ms;
 }
 
-.fa-css {
+.fa-html5:hover {
+    color: rgba(255,0,0,1);
+    text-shadow: 0 0 1.5rem rgba(255,0,0,1);
+}
+
+.fa-css3-alt {
     color: rgba(102,51,153,1);
+    transition: 250ms;
+    -webkit-transition: 250ms;
+    -moz-transition: 250ms;
+    -ms-transition: 250ms;
+    -o-transition: 250ms;
 }
 
+.fa-css3-alt:hover {
+    color: rgba(0,0,255,1);
+    text-shadow: 0 0 1.5rem rgba(0,0,255,1);
+}
 
+/* Right */
+#languagesRight {
+    height: 100%;
+    width: calc(50% - 5rem);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 5rem;
+}
 
-/* What I'm Learning */
-#whatImLearning {
-    animation: fadeInScroll forwards;
-    -webkit-animation: fadeInScroll forwards;
-    animation-timeline: view();
-    animation-range: entry;
+.fa-figma {
+    transition: 250ms;
+    -webkit-transition: 250ms;
+    -moz-transition: 250ms;
+    -ms-transition: 250ms;
+    -o-transition: 250ms;
+}
+
+.fa-figma:hover {
+    text-shadow: 0 0 1.5rem rgba(255,255,255,1);
 }
 
 .fa-square-js {
     color: rgba(247,223,30,1);
+    transition: 250ms;
+    -webkit-transition: 250ms;
+    -moz-transition: 250ms;
+    -ms-transition: 250ms;
+    -o-transition: 250ms;
+}
+
+.fa-square-js:hover {
+    color: rgba(255,255,0,1);
+    text-shadow: 0 0 1.5rem rgba(255,255,0,1);
 }
 
 .fa-node-js {
     color: rgba(60,135,58,1);
+    transition: 250ms;
+    -webkit-transition: 250ms;
+    -moz-transition: 250ms;
+    -ms-transition: 250ms;
+    -o-transition: 250ms;
 }
+
+.fa-node-js:hover {
+    color: rgba(0,255,0,1);
+    text-shadow: 0 0 1.5rem rgba(0,255,0,1);
+}
+
+
 
 /* Projects */
 #projects {
@@ -262,4 +388,92 @@ header > h1 {
     -webkit-animation: fadeInScroll forwards;
     animation-timeline: view();
     animation-range: entry;
+}
+
+#aboutMe > .wrapper > main {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+#aboutMe > .wrapper > main > p {
+    font-size: 2rem;
+    font-weight: 100;
+    padding: 2rem;
+}
+
+
+
+/* Footer */
+footer {
+    height: 25%;
+    width: 100%;
+    background: black;
+    position: static;
+    bottom: 0;
+}
+
+footer > .wrapper > #footerLeft {
+    height: 100%;
+    width: calc(50% - 5rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 5rem;
+}
+
+footer > .wrapper > #footerLeft > #contactInfo {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+footer > .wrapper > #footerLeft > #contactInfo > i {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.5rem;
+}
+
+footer > .wrapper > #footerLeft > #contactInfo > i > p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+
+footer > .wrapper > #footerRight {
+    height: 100%;
+    width: calc(50% - 5rem);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+footer > .wrapper > #footerRight > .socialLinks {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    font-size: 2rem;
 }
