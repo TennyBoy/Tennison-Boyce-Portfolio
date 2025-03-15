@@ -432,16 +432,17 @@ footer > .wrapper > #footerLeft {
     margin-right: 5rem;
 }
 
-footer > .wrapper > #footerLeft > #contactInfo {
+footer > .wrapper > #footerLeft > #info {
     height: fit-content;
     width: fit-content;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 2em;
 }
 
-footer > .wrapper > #footerLeft > #contactInfo > i {
+footer > .wrapper > #footerLeft > #info > i {
     height: fit-content;
     width: fit-content;
     display: flex;
@@ -451,7 +452,7 @@ footer > .wrapper > #footerLeft > #contactInfo > i {
     font-size: 1.5rem;
 }
 
-footer > .wrapper > #footerLeft > #contactInfo > i > p {
+footer > .wrapper > #footerLeft > #info > i > p {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
 }
@@ -476,4 +477,36 @@ footer > .wrapper > #footerRight > .socialLinks {
     align-items: center;
     gap: 1em;
     font-size: 2rem;
+}
+
+
+
+@media (max-width: 1024px) {
+    #hero > .wrapper > #left {
+        display: none;
+    }
+
+    #hero > .wrapper > #right {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    #Languages > .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #Languages > .wrapper > #languagesLeft {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    #Languages > .wrapper > #languagesRight {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
 }
