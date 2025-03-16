@@ -103,7 +103,7 @@ section {
 }
 
 #hero #left > img {
-    height: 25rem;
+    height: 30rem;
     width: auto;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
@@ -291,7 +291,7 @@ footer #right > .socialLinks > a {
     }
 
     #hero #left > img {
-        height: 18rem;
+        /* height: 18rem; */
     }
 
     #hero #right {
