@@ -4,8 +4,9 @@
 
 /* System Settings */
 :root {
-    --bg-primary: rgba(15,15,15,1);
+    --bg-primary: rgba(20,20,20,1);
     --txt-primary: rgba(255,255,255,1);
+    --accent-1: rgba(245,222,179,1);
 
     --ff-primary: "Roboto", sans-serif;
 }
@@ -23,6 +24,7 @@ html,
 body {
     height: fit-content;
     width: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -37,7 +39,7 @@ body {
 section {
     height: fit-content;
     width: 100%;
-    padding-block: 5em;
+    padding-block: 3em;
 }
 
 .wrapper {
@@ -63,7 +65,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: clamp(1rem, 1vw + 1rem, 3.25rem);
     font-weight: 500;
     margin-block: 1em;
 }
@@ -78,8 +80,12 @@ header + main {
 }
 
 footer {
-    height: 10svh;
-    background: rgba(0,0,0,1);
+    height: fit-content;
+    width: 100%;
+    background: rgba(5,5,5,1);
+    padding: 2.5em 0;
+    position: relative;
+    bottom: 0;
 }
 
 
@@ -88,11 +94,12 @@ footer {
 #hero {
     height: 100svh;
     padding: 0;
+    margin-bottom: 3em;
 }
 
 #hero img {
-    height: 25rem;
-    width: auto;
+    height: auto;
+    width: clamp(10rem, 25vw + 1rem, 40rem);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -108,20 +115,18 @@ footer {
 }
 
 #hero main > h1 {
-    /* font-size: 4rem; */
-    font-size: clamp(3.125rem, 5vw + 1rem, 6.25rem);
+    font-size: clamp(2rem, 6vw + 1rem, 8rem);
     font-weight: 100;
 }
 
 #hero main > h1 > a {
-    color: var(--txt-primary);
+    color: var(--accent-1);
     text-decoration: none;
     font-weight: 300;
 }
 
 #hero main > h2 {
-    /* font-size: 2rem; */
-    font-size: clamp(1rem, 5vw + 1rem, 3.125rem);
+    font-size: clamp(0.75rem, 2vw + 1rem, 4rem);
     font-weight: 100;
 }
 
@@ -136,7 +141,7 @@ footer {
 }
 
 #hero main > .socialLinks i {
-    font-size: clamp(1rem, 5vw + 1rem, 3.125rem);
+    font-size: clamp(1.75rem, 2vw + 1rem, 4rem);
 }
 
 
@@ -147,7 +152,7 @@ footer {
 }
 
 #Languages main > i {
-    font-size: 4rem;
+    font-size: clamp(1.75rem, 2vw + 1rem, 4rem);
 }
 
 
@@ -161,23 +166,32 @@ footer {
     flex-direction: column;
 }
 
+#aboutMe p {
+    font-size: clamp(0.75rem, 0.5vw + 1rem, 1.75rem);
+    font-weight: 200;
+    text-align: center;
+}
+
 
 
 /* Footer */
-footer {
-    padding: 2.5em 0;
-}
-
 footer .contactInfo {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     gap: 1em;
 }
 
 footer .contactInfo > i {
     display: flex;
     gap: 0.25em;
+    font-size: clamp(0.25rem, 0.5vw + 1rem, 1.75rem);
+}
+
+footer .contactInfo p {
+    font-size: clamp(0.25rem, 0.5vw + 1rem, 1.75rem);
+    font-weight: 200;
 }
 
 footer .socialLinks {
@@ -192,7 +206,7 @@ footer .socialLinks > a {
 }
 
 footer .socialLinks > a > i {
-    font-size: clamp(1rem, 5vw + 1rem, 3.125rem);
+    font-size: clamp(1.75rem, 2vw + 1rem, 4rem);
 }
 
 
@@ -209,13 +223,12 @@ footer .socialLinks > a > i {
 
 
 /* Hero */
-#hero {
-    height: fit-content;
-    padding: 2.5em 0;
+#hero #heroImg {
+    align-items: flex-end;
 }
 
-#hero img {
-    height: calc(25svh + 1rem);
+#hero #heroMain {
+    align-items: flex-start;
 }
 
 #hero main h1, #hero main h2 {
@@ -230,21 +243,10 @@ footer .socialLinks > a > i {
 
 /* Footer */
 footer .contactInfo {
-    flex-direction: column;
+    align-items: center;
 }
 
 footer .socialLinks {
     justify-content: center;
 }
-}
-
-
-
-@media (max-width: 569px) {
-
-/* General Settings */
-header {
-    font-size: calc(1vw + 1rem);
-}
-
 }
