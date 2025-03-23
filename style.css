@@ -5,7 +5,9 @@
 /* System Settings */
 :root {
     --bg-primary: rgba(20,20,20,1);
+    --bg-secondary: rgba(255,255,255,1);
     --txt-primary: rgba(255,255,255,1);
+    --txt-secondary: rgba(0,0,0,1);
     --accent-1: rgba(245,222,179,1);
 
     --ff-primary: "Roboto", sans-serif;
@@ -58,9 +60,77 @@ body {
     }
 }
 
+@keyframes inFromLeft {
+    0% {
+        opacity: 0;
+        scale: 0.8;
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+}
+
+    100% {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+}
+
+@keyframes inFromRight {
+    0% {
+        opacity: 0;
+        scale: 0.8;
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+}
+
+    100% {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+}
+
 
 
 /* General Settings */
+.fa-github {
+    transition: 150ms;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+
+.fa-github:hover {
+    color: rgba(36,41,46,1);
+}
+
+.fa-linkedin {
+    transition: 150ms;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+
+.fa-linkedin:hover {
+    color: rgba(0,119,181,1);
+}
+
 section {
     height: fit-content;
     width: 100%;
@@ -144,6 +214,7 @@ footer {
 #hero main > h1 {
     font-size: clamp(2rem, 6vw + 1rem, 8rem);
     font-weight: 100;
+    white-space: nowrap;
 }
 
 #hero main > h1 > a {
@@ -173,12 +244,109 @@ footer {
 
 
 
-/* Languages */
-#Languages {
+/* Projects */
+#Projects {
     animation: scrollFade forwards;
     -webkit-animation: scrollFade forwards;
     animation-timeline: view();
     animation-range: entry;
+}
+
+#Projects .wrapper {
+    flex-direction: column;
+}
+
+#Projects header {
+    flex-direction: column;
+}
+
+#Projects header a {
+    color: var(--txt-primary);
+    text-decoration: none;
+    font-size: clamp(0rem, 0.25vw + 1rem, 4rem);
+    font-weight: 300;
+}
+
+#Projects header a:hover {
+    text-decoration: underline;
+}
+
+#Projects .split {
+    gap: 2em;
+}
+
+#Projects a {
+    text-decoration: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 0.25em;
+    background: var(--bg-secondary);
+}
+
+@media (min-width: 1602px) {
+    .card {
+        transition: 500ms;
+        -webkit-transition: 500ms;
+        -moz-transition: 500ms;
+        -ms-transition: 500ms;
+        -o-transition: 500ms;
+}
+
+    .card:hover {
+        transform: translateY(-1em);
+        -webkit-transform: translateY(-1em);
+        -moz-transform: translateY(-1em);
+        -ms-transform: translateY(-1em);
+        -o-transform: translateY(-1em);
+        box-shadow: 0 0.5em 1em 0.5em rgba(0,0,0,1);
+}
+}
+
+.card img {
+    height: auto;
+    width: 100%;
+}
+
+.card h4,
+.card h5,
+.card h6 {
+    color: var(--txt-secondary);
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.card h5 {
+    font-size: clamp(0rem, 0.25vw + 1rem, 4rem);
+}
+
+.card h6 {
+    font-size: clamp(0rem, 0.075vw + 1rem, 4rem);
+}
+
+.card h4 {
+    font-size: clamp(0rem, 1vw + 1rem, 4rem);
+}
+
+
+
+/* Languages */
+@media (min-width: 1602px) {
+    #whatIKnow {
+        animation: inFromLeft forwards;
+        -webkit-animation: inFromLeft forwards;
+        animation-timeline: view();
+        animation-range: entry;
+}
+
+    #whatImLearning {
+        animation: inFromRight forwards;
+        -webkit-animation: inFromRight forwards;
+        animation-timeline: view();
+        animation-range: entry;
+}
 }
 
 #Languages main {
@@ -224,11 +392,11 @@ footer .contactInfo {
 footer .contactInfo > i {
     display: flex;
     gap: 0.25em;
-    font-size: clamp(0.25rem, 0.5vw + 1rem, 1.75rem);
+    font-size: clamp(0.05rem, 0.075vw + 1rem, 1.75rem);
 }
 
 footer .contactInfo p {
-    font-size: clamp(0.25rem, 0.5vw + 1rem, 1.75rem);
+    font-size: clamp(0.05rem, 0.075vw + 1rem, 1.75rem);
     font-weight: 200;
 }
 
