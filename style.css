@@ -24,7 +24,7 @@
 
 html,
 body {
-    height: fit-content;
+    min-height: 100%;
     width: 100%;
     scroll-behavior: smooth;
 }
@@ -196,7 +196,8 @@ footer {
 
 #hero img {
     height: auto;
-    width: clamp(10rem, 25vw + 1rem, 40rem);
+    /* width: clamp(10rem, 25vw + 1rem, 40rem); */
+    width: 50%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -288,6 +289,7 @@ footer {
 
 @media (min-width: 1602px) {
     .card {
+        max-width: 33%;
         transition: 500ms;
         -webkit-transition: 500ms;
         -moz-transition: 500ms;
@@ -308,6 +310,8 @@ footer {
 .card img {
     height: auto;
     width: 100%;
+    aspect-ratio: 1.78 / 1;
+    background-color: rgba(0,0,0,1);
 }
 
 .card h4,
@@ -443,6 +447,17 @@ footer .socialLinks > a > i {
 
 .socialLinks {
     justify-content: center;
+}
+
+
+
+/* Languages */
+#whatIKnow,
+#whatImLearning {
+    animation: fadeIn forwards;
+    -webkit-animation: fadeIn forwards;
+    animation-timeline: view();
+    animation-range: entry;
 }
 
 
