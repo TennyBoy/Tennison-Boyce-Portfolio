@@ -8,7 +8,7 @@
     --bg-secondary: rgba(20,20,20,1);
     --txt-primary: rgba(0,0,0,1);
     --txt-secondary: rgba(255,255,255,1);
-    --accent-1: rgba(245,222,179,1);
+    --accent-1: rgba(155,15,15,1);
 
     --ff-primary: "Roboto", sans-serif;
 }
@@ -49,9 +49,13 @@ body {
     position: fixed;
     top: 2rem;
     right: 2rem;
+    z-index: 9999;
+    border: none;
+    background: none;
 }
 
 #dark-mode-toggle i {
+    color: var(--txt-primary);
     font-size: clamp(1.75rem, 0.75vw + 1rem, 4rem);
     pointer-events: none;
 }
