@@ -4,6 +4,16 @@
 
 /* System Settings */
 :root {
+    --bg-primary: rgba(235,235,235,1);
+    --bg-secondary: rgba(20,20,20,1);
+    --txt-primary: rgba(0,0,0,1);
+    --txt-secondary: rgba(255,255,255,1);
+    --accent-1: rgba(245,222,179,1);
+
+    --ff-primary: "Roboto", sans-serif;
+}
+
+.darkmode {
     --bg-primary: rgba(20,20,20,1);
     --bg-secondary: rgba(235,235,235,1);
     --txt-primary: rgba(255,255,255,1);
@@ -34,6 +44,19 @@ body {
     color: var(--txt-primary);
     font-family: var(--ff-primary);
 }
+
+#dark-mode-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+}
+
+#dark-mode-toggle i {
+    font-size: clamp(1.75rem, 0.75vw + 1rem, 4rem);
+    pointer-events: none;
+}
+
+
 
 
 
@@ -177,7 +200,7 @@ header + main {
 footer {
     height: fit-content;
     width: 100%;
-    background: rgba(5,5,5,1);
+    background: rgba(20,20,20,1);;
     padding: 2.5em 0;
     position: relative;
     bottom: 0;
@@ -385,6 +408,10 @@ footer {
 
 
 /* Footer */
+footer * {
+    color: rgba(255,255,255,1);
+}
+
 footer .contactInfo {
     display: flex;
     flex-direction: column;
@@ -412,7 +439,7 @@ footer .socialLinks {
 }
 
 footer .socialLinks > a {
-    color: var(--txt-primary);
+    color:rgba(255,255,255,1);
 }
 
 footer .socialLinks > a > i {
