@@ -46,6 +46,8 @@ body {
 }
 
 #dark-mode-toggle {
+    height: clamp(1.75rem, 0.75vw + 1rem, 4rem);
+    width: clamp(1.75rem, 0.75vw + 1rem, 4rem);
     position: fixed;
     top: 2rem;
     right: 2rem;
@@ -55,8 +57,11 @@ body {
 }
 
 #dark-mode-toggle i {
+    height: 100%;
+    width: 100%;
+    text-align: center;
     color: var(--txt-primary);
-    font-size: clamp(1.75rem, 0.75vw + 1rem, 4rem);
+    font-size: clamp(1.75rem, 0.5vw + 1rem, 4rem);
     pointer-events: none;
 }
 
@@ -204,7 +209,7 @@ header + main {
 footer {
     height: fit-content;
     width: 100%;
-    background: rgba(20,20,20,1);;
+    background: rgba(0,0,0,1);;
     padding: 2.5em 0;
     position: relative;
     bottom: 0;
