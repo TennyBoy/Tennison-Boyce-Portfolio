@@ -1,17 +1,22 @@
 let darkMode = localStorage.getItem('darkMode');
-const darkModeToggle = document.querySelector('#dark-mode-toggle');
+const darkModeToggle = document.querySelector('#darkModeButton');
 
 const enableDarkMode = () => {
   document.documentElement.classList.add('darkmode');
-  document.getElementById('toggleDarkOn').style.display = 'none';
-  document.getElementById('toggleDarkOff').style.display = 'inline-block';
+  document.getElementById('darkOn').style.display = 'none';
+  document.getElementById('lightModeLogo').style.display = 'none'
+  document.getElementById('darkOff').style.display = 'inline-block';
+  document.getElementById('darkModeLogo').style.display = 'block'
+
   localStorage.setItem('darkMode', 'enabled');
 };
 
 const disableDarkMode = () => {
   document.documentElement.classList.remove('darkmode');
-  document.getElementById('toggleDarkOn').style.display = 'inline-block';
-  document.getElementById('toggleDarkOff').style.display = 'none';
+  document.getElementById('darkOn').style.display = 'inline-block';
+  document.getElementById('lightModeLogo').style.display = 'block'
+  document.getElementById('darkOff').style.display = 'none';
+  document.getElementById('darkModeLogo').style.display = 'none'
   localStorage.setItem('darkMode', null);
 };
 
