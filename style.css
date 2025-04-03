@@ -315,7 +315,8 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 0.25em;
-    background: var(--bg-secondary);
+    background: rgba(255,255,255,1);
+    border: 0.075em solid rgba(0,0,0,1)
 }
 
 @media (min-width: 1602px) {
@@ -348,7 +349,7 @@ footer {
 .card h4,
 .card h5,
 .card h6 {
-    color: var(--txt-secondary);
+    color: rgba(0,0,0,1);
     font-weight: 300;
     text-decoration: none;
 }
