@@ -305,6 +305,7 @@ footer {
 
 #Projects .split {
     gap: 2em;
+    justify-content: space-evenly;
 }
 
 #Projects a {
