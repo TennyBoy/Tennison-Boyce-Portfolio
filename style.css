@@ -318,7 +318,7 @@ footer {
     background: var(--bg-secondary);
 }
 
-@media (min-width: 1602px) {
+@media (min-width: 1025px) {
     .card {
         max-width: 33%;
         transition: 500ms;
@@ -368,7 +368,7 @@ footer {
 
 
 /* Languages */
-@media (min-width: 1602px) {
+@media (min-width: 1025px) {
     #whatIKnow {
         animation: inFromLeft forwards;
         -webkit-animation: inFromLeft forwards;
@@ -457,7 +457,7 @@ footer .socialLinks > a > i {
 
 
 /* Media */
-@media (max-width: 1601px) {
+@media (max-width: 1024px) {
 
 /* General Settings */
 .split {
