@@ -512,23 +512,3 @@ footer .socialLinks {
     justify-content: center;
 }
 }
-
-
-
-/* Clock Page */
-header .split1 {
-    justify-content: flex-start;
-    align-items: center;
-}
-
-header .split2 {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-header .split3 {
-    justify-content: flex-end;
-    align-items: center;
-    text-align: end;
-}
